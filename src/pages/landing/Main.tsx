@@ -2,6 +2,8 @@ import React from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
+import {motion} from "framer-motion"
+
 
 const Main = () => {
 
@@ -12,7 +14,13 @@ const Main = () => {
   return (
     <div className="w-full h-screen text-center">
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
+        
         <div>
+        <motion.div
+        initial={{ opacity: 0, x: -100}}
+        animate={{ opacity: 1, x: 0}}
+        transition={{duration: 0.25}}
+        >
           <p className="uppercase text-sm tracking-widest text-gray-600">
             LETS BUILD SOMETHING!
           </p>
@@ -26,6 +34,7 @@ const Main = () => {
             I'm focused on building responsive front-end web applications while
             learning back-end technologies.
           </p>
+          </motion.div>
           <div className="flex items-center justify-between m-auto max-w-[330px]">
             <div className="rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-105 ease-in duration-300">
               {github_icon}
