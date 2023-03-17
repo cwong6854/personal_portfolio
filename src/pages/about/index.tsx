@@ -1,5 +1,5 @@
 import React from "react";
-import cw_photo from "../../../public/linkedin_photo.png";
+import cw_photo from "../../../public/photo_headshot.png";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
@@ -11,7 +11,7 @@ const About = () => {
   }, [])
   console.log(width)
   return (
-    <div className="w-full md:h-screen p-2 flex justify-center items-center py-16 bg-red-400">
+    <div className="w-full md:h-screen p-2 flex justify-center items-center py-16">
       <div className="text-center">
         <p className="text-gray-400">Let me introduce myself</p>
         <h1>About Me</h1>
@@ -21,14 +21,16 @@ const About = () => {
         >
 
         <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8 pt-10">
-          <div className="flex items-center justify-center">
+          <div className="flex justify-center items-center">
             <Image
-              className="max-md:rounded-full max-md:w-[75%] border-solid border-black border-2"
+              className="block max-md:rounded-full max-md:w-[50%] border-solid border-black border-2"
               src={cw_photo}
               alt="/"
+              width="200"
+              height="200"
             />
           </div>
-          <div className="col-span-2">
+          <div className="pt-2 col-span-2">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
               placeat consequuntur beatae, molestias perspiciatis maiores nemo
