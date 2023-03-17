@@ -2,6 +2,7 @@ import React from "react";
 import cw_photo from "../../../public/linkedin_photo.png";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const About = () => {
   const [width, setWidth] = useState(0);
@@ -10,10 +11,15 @@ const About = () => {
   }, [])
   console.log(width)
   return (
-    <div className="w-full md:h-screen p-2 flex items-center py-16">
+    <div className="w-full md:h-screen p-2 flex justify-center items-center py-16 bg-red-400">
       <div className="text-center">
         <p className="text-gray-400">Let me introduce myself</p>
         <h1>About Me</h1>
+        <motion.div
+        initial={{opacity: 0, x: -50}}
+        animate={{opacity: 1, x: 0}}
+        >
+
         <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8 pt-10">
           <div className="flex items-center justify-center">
             <Image
@@ -37,6 +43,7 @@ const About = () => {
             </p>
           </div>
         </div>
+        </motion.div>
       </div>
     </div>
   );

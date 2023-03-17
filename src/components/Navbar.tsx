@@ -92,10 +92,10 @@ const NavBar = () => {
               <Link href="/about">
                 <li className="py-4 text-sm">About</li>
               </Link>
-              <Link href="/">
+              <Link href="/projects">
                 <li className="py-4 text-sm">Projects</li>
               </Link>
-              <Link href="/">
+              <Link href="/contact">
                 <li className="py-4 text-sm">Contact</li>
               </Link>
             </ul>
