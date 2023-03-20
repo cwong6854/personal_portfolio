@@ -1,5 +1,5 @@
 import React from "react";
-import cw_photo from "../../../public/photo_headshot.png";
+import cw_photo from "../../public/photo_headshot.png";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
@@ -11,8 +11,8 @@ const About = () => {
   }, [])
   console.log(width)
   return (
-    <div className="w-full md:h-screen p-2 flex justify-center items-center py-16">
-      <div className="text-center">
+    <div id="about" className="w-full md:h-screen p-2 flex justify-center items-center py-16">
+      <div className="">
         <p className="text-gray-400">Let me introduce myself</p>
         <h1>About Me</h1>
         <motion.div

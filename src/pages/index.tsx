@@ -1,8 +1,11 @@
 import Head from "next/head";
 import Image from "next/image";
 import NavBar from "@/components/Navbar";
-import Main from "@/pages/landing/Main";
+import Main from "@/pages/Main";
 import About from "./about";
+import Project from "./projects";
+import Skills from "./skills";
+import Contact from "./contact";
 
 
 export default function Home() {
@@ -16,6 +19,10 @@ export default function Home() {
       </Head>
       <NavBar />
       <Main />
+      <About/>
+      <Skills/>
+      <Project/>
+      <Contact/>
     </>
   );
 }
