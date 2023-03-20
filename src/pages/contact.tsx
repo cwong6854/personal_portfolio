@@ -2,6 +2,8 @@ import { AiOutlineMail } from "react-icons/ai";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import {HiOutlineChevronDoubleUp} from "react-icons/hi";
+import linkedin_headshot from "../../public/linkedin_photo.png"
+import Image from "next/image";
 import Link from "next/link";
 
 const Contact = () => {
@@ -22,14 +24,14 @@ const Contact = () => {
           <div className="col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4">
             <div className="lg:p-4 h-full">
               <div>
-                <img
+                <Image
                   className="rounded-xl hover:scale-105 ease-in duration-300"
-                  src=""
+                  src={linkedin_headshot}
                   alt="/"
                 />
               </div>
               <div>
-                <h2 className="py-2">Name Here</h2>
+                <h2 className="py-2">Curtis Wong</h2>
                 <p className="py-2">Front-end Developer</p>
                 <p className="py-4">
                   I am available for freelance or full-time positions. Contact

@@ -14,7 +14,7 @@ const Project = () => {
                 <ProjectItem
                 title="Rimble"
                 imagebg={rimble_web}
-                url="https://rimble.io/"
+                url="/rimble"
                 />
             </div>
         </div>

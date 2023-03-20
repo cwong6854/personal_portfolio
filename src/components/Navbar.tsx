@@ -9,14 +9,15 @@ import { useRouter } from "next/router";
 const NavBar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
-  const [navBG, setNavBG] = useState("#ecf0f3")
-  const [linkColor, setLinkColor] = useState('#1f2937')
+  const [navBG, setNavBG] = useState("#ecf0f3");
+  const [linkColor, setLinkColor] = useState('#1f2937');
+  const [menuColor, setMenuColor] = useState("#ecf0f3");
 
   const router = useRouter();
 
   useEffect(() => {
     if ( 
-      router.asPath === '/property' ||
+      router.asPath === '/rimble' ||
       router.asPath === '/property' ||
       router.asPath === '/property' ||
       router.asPath === '/property' ||
@@ -24,9 +25,11 @@ const NavBar = () => {
     ) {
       setNavBG('transparent')
       setLinkColor('#ecf0f3')
+      setMenuColor("#ecf0f4")
     } else {
       setNavBG('#ecf0f3')
       setLinkColor('#1f2937')
+      setMenuColor("black")
     }
   }, [router])
 
@@ -46,7 +49,7 @@ const NavBar = () => {
   },[])
 
 
-  const menu_icon = <AiOutlineMenu size={25} />;
+  const menu_icon = <AiOutlineMenu size={25} style={{color: `${menuColor}`}}/>;
   const close_icon = <AiOutlineClose />;
   const linkedin_icon = <FaLinkedinIn />;
   const github_icon = <FaGithub />;
