@@ -9,7 +9,7 @@ const Project = () => {
     return (
     <div id="projects" className="w-full">
         <div className="max-w-[1240px] mx-auto px-2 py-16 text-center flex flex-col justify-center items-center">
-            <h1 className="text-black-400">Projects</h1>
+            <h1 className="py-16 text-black-400">Projects</h1>
             <div className="max-w-[600px] md:grid grid-cols-1 pt-4">
                 <ProjectItem
                 title="Rimble"
