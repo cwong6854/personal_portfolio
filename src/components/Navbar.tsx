@@ -5,6 +5,7 @@ import { AiOutlineMail, AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { useRouter } from "next/router";
+import cw_logo from "../../public/cw_logo.png"
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
@@ -59,7 +60,7 @@ const NavBar = () => {
   return (
     <div style={{backgroundColor: `${navBG}`}} className={shadow ? "fixed w-full h-20 shadow-xl z-[100]" : "fixed w-full h-20 z-[100]"}>
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
-        <Link href="/"><Image src="/../public/cw_logo.png" alt="/" width="50" height="50" /></Link>
+        <Link href="/"><Image src={cw_logo} alt="/" height={100}/></Link>
         
         <div>
           <ul style={{color: `${linkColor}`}} className="hidden md:flex">
@@ -111,7 +112,7 @@ const NavBar = () => {
           <div>
             <div className="flex w-full items-center justify-between">
               <Image
-                src="/../public/cw_logo.png"
+                src={cw_logo}
                 alt="/"
                 width="87"
                 height="35"
@@ -124,8 +125,8 @@ const NavBar = () => {
               </div>
             </div>
             <div className="border-b border-gray-300 my-4">
-              <p className="w-[85] md:w-[90%] py-4">
-                Let's build something legendary together
+              <p className="">
+                Let's connect and build things together!
               </p>
             </div>
           </div>

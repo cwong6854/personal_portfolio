@@ -1,4 +1,14 @@
 import Image from "next/image";
+import react_logo from "../../public/skills/react.png"
+import aws_logo from "../../public/skills/aws.png"
+import tailwind_logo from "../../public/skills/tailwind.png"
+import python_logo from "../../public/skills/python.png" 
+import html_logo from "../../public/skills/html.png"
+import css_logo from "../../public/skills/css.png"
+import ts_logo from "../../public/skills/typescript.png"
+import js_logo from "../../public/skills/javascript.png"
+import css from "styled-jsx/css";
+
 
 const Skills = () => {
   return (
@@ -11,7 +21,7 @@ const Skills = () => {
           <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
           <div className="grid grid-cols-2 gap-4 justify-center items-center">
             <div className="m-auto">
-              <Image src="" alt="/" width="64" height="64" />
+              <Image src={react_logo} alt="/" width="64" />
             </div>
             <div>React</div>
           </div>
@@ -19,7 +29,7 @@ const Skills = () => {
           <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
           <div className="grid grid-cols-2 gap-4 justify-center items-center">
             <div className="m-auto">
-              <Image src="" alt="/" width="64" height="64" />
+              <Image src={ts_logo} alt="/" width="64" />
             </div>
             <div>TypeScript</div>
           </div>
@@ -27,7 +37,7 @@ const Skills = () => {
           <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
           <div className="grid grid-cols-2 gap-4 justify-center items-center">
             <div className="m-auto">
-              <Image src="" alt="/" width="64" height="64" />
+              <Image src={js_logo} alt="/" width="64" />
             </div>
             <div>JavaScript</div>
           </div>
@@ -35,7 +45,7 @@ const Skills = () => {
           <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
           <div className="grid grid-cols-2 gap-4 justify-center items-center">
             <div className="m-auto">
-              <Image src="" alt="/" width="64" height="64" />
+              <Image src={html_logo} alt="/" width="64" />
             </div>
             <div>HTML</div>
           </div>
@@ -43,7 +53,7 @@ const Skills = () => {
           <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
           <div className="grid grid-cols-2 gap-4 justify-center items-center">
             <div className="m-auto">
-              <Image src="" alt="/" width="64" height="64" />
+              <Image src={css_logo} alt="/" width="64" />
             </div>
             <div>CSS</div>
           </div>
@@ -51,7 +61,7 @@ const Skills = () => {
           <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
           <div className="grid grid-cols-2 gap-4 justify-center items-center">
             <div className="m-auto">
-              <Image src="" alt="/" width="64" height="64" />
+              <Image src={python_logo} alt="/" width="64" height="64" />
             </div>
             <div>Python</div>
           </div>
@@ -59,7 +69,7 @@ const Skills = () => {
           <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
           <div className="grid grid-cols-2 gap-4 justify-center items-center">
             <div className="m-auto">
-              <Image src="" alt="/" width="64" height="64" />
+              <Image src={aws_logo} alt="/" width="64" height="64"/>
             </div>
             <div>AWS</div>
           </div>
@@ -67,7 +77,7 @@ const Skills = () => {
           <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
           <div className="grid grid-cols-2 gap-4 justify-center items-center">
             <div className="m-auto">
-              <Image src="" alt="/" width="64" height="64" />
+              <Image src={tailwind_logo} alt="/" width="64" height="64" />
             </div>
             <div>Tailwind</div>
           </div>
