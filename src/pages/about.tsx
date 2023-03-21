@@ -11,9 +11,10 @@ const About = () => {
   }, []);
   console.log(width);
   return (
-    <div id="about" className="w-full md:h-screen p-2 flex items-center py-16">
+    <div id="about" className="w-full p-2 flex items-center">
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center py-20 text-center">
-        <h1 className="py-16">About Me</h1>
+        <p className="uppercase text-sm tracking-widest text-gray-500">Get to know more</p>
+        <h1 className="pb-16 pt-4 text-gray-700">About Me</h1>
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}

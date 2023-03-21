@@ -21,14 +21,14 @@ const Main = () => {
         animate={{ opacity: 1, x: 0}}
         transition={{duration: 0.25}}
         >
-          <p className="uppercase text-sm tracking-widest text-gray-600">
+          <p className="uppercase text-sm tracking-widest text-gray-500">
             LETS BUILD SOMETHING!
           </p>
           <h1 className="py-4 text-gray-700">
-            Hi, I'm <span className="text-[#5651e5]">Curtis</span>
+            Hi, I'm <span className="text-[#4855e5]">Curtis</span>
           </h1>
-          <h1 className="py-4 text-gray-700">A Frontend-Web Developer</h1>
-          <p className="py-4 text-gray-600 max-w-[70%] m-auto">
+          <h1 className="py-4 text-gray-700">A Software Developer</h1>
+          <p className="py-4 text-gray-600 max-w-[70%] m-auto text-left">
             I'm a recent UC Berkeley graduate specializing in building (and
             occasionally designing) exceptional digital experiences. Currently,
             I'm focused on building responsive front-end web applications while

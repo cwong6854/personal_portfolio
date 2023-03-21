@@ -13,10 +13,11 @@ import css from "styled-jsx/css";
 const Skills = () => {
   return (
     <div id="skills" className="w-full p-2">
-      <div className="max-w-[1240px] mx-auto flex flex-col justify-center py-20">
-        <p className="text-xl tracking-widest uppercase text-[#5651e5]">
+      <div className="max-w-[1240px] mx-auto flex flex-col justify-center py-20 text-center">
+        <p className="uppercase text-sm tracking-widest text-gray-500">Relevant tech stack</p>
+        <h1 className="pb-16 pt-4 text-gray-700">
           Skills
-        </p>
+        </h1>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
           <div className="grid grid-cols-2 gap-4 justify-center items-center">

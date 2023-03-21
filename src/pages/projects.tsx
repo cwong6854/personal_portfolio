@@ -7,9 +7,10 @@ import Link from "next/link";
 
 const Project = () => {
     return (
-    <div id="projects" className="w-full">
-        <div className="max-w-[1240px] mx-auto px-2 py-16 text-center flex flex-col justify-center items-center">
-            <h1 className="py-16 text-black-400">Projects</h1>
+    <div id="projects" className="w-full p-2 flex items-center py-16">
+        <div className="max-w-[1240px] mx-auto px-2 py-6 text-center flex flex-col justify-center items-center">
+            <p className="uppercase text-sm tracking-widest text-gray-500">View my previous work</p>
+            <h1 className="pb-16 pt-4 text-gray-700">Projects</h1>
             <div className="max-w-[600px] md:grid grid-cols-1 pt-4">
                 <ProjectItem
                 title="Rimble"
