@@ -6,6 +6,7 @@ import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { useRouter } from "next/router";
 import cw_logo from "../../public/cw_logo.png"
+import {motion,useScroll} from "framer-motion"
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
@@ -14,6 +15,7 @@ const NavBar = () => {
   const [linkColor, setLinkColor] = useState('#1f2937');
   const [menuColor, setMenuColor] = useState("#ecf0f3");
 
+  const {scrollYProgress} = useScroll()
   const router = useRouter();
 
   useEffect(() => {
@@ -64,29 +66,29 @@ const NavBar = () => {
         
         <div>
           <ul style={{color: `${linkColor}`}} className="hidden md:flex">
-            <Link className="ml-10 text-sm uppercase hover:border-b" href="/">
+            <Link className="ml-10 text-sm uppercase hover:border-b border-black" href="/">
               Home
             </Link>
             <Link
-              className="ml-10 text-sm uppercase hover:border-b"
+              className="ml-10 text-sm uppercase hover:border-b border-black/80"
               href="/#about"
             >
               About
             </Link>
             <Link
-              className="ml-10 text-sm uppercase hover:border-b"
+              className="ml-10 text-sm uppercase hover:border-b border-black/80"
               href="/#skills"
             >
               Skills
             </Link>
             <Link
-              className="ml-10 text-sm uppercase hover:border-b"
+              className="ml-10 text-sm uppercase hover:border-b border-black/80"
               href="/#projects"
             >
               Projects
             </Link>
             <Link
-              className="ml-10 text-sm uppercase hover:border-b"
+              className="ml-10 text-sm uppercase hover:border-b border-black/80"
               href="/#contact"
             >
               Contact

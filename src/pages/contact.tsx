@@ -1,8 +1,11 @@
+import React, { useRef } from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
+import {motion} from "framer-motion";
 import linkedin_headshot from "../../public/linkedin_photo.png";
+import emailjs from "@emailjs/browser";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -12,15 +15,49 @@ const Contact = () => {
   const mail_icon = <AiOutlineMail />;
   const person_icon = <BsFillPersonLinesFill />;
 
+  // EmailJS
+
+  const form = useRef(null);
+  const sendEmail = (e: any) => {
+    e.preventDefault();
+
+
+    emailjs.sendForm("gmail", "template_l4juqb9", e.target, "8mGVXzo77MLLMclo2").then(
+      (res) => {
+        console.log(res.text);
+      },
+      (err) => {
+        console.log(err.text);
+      }
+    );
+    if (document.getElementById('contact-form') === null) {
+      return
+    } else {
+      e.target.reset();
+    }
+  };
+
   return (
     <div id="contact" className="w-full p-2 flex flex-col items-center py-16">
       <div className="max-w-[1240px] flex flex-col justify-center py-6 text-center items-center">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.25, delay: 0.2 }}
+        viewport={{ once: true }}
+        >
         <p className="uppercase text-sm tracking-widest text-gray-500 text-center">
           Get in touch
         </p>
         <h1 className="pb-16 pt-4 text-gray-700 text-center">Contact</h1>
+        </motion.div>
+        <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.25, delay: 0.2 }}
+        viewport={{ once: true }}
+        >
         <div className="grid lg:grid-cols-5 gap-8">
-          {/* left */}
           <div className="col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4">
             <div className="lg:p-4 h-full">
               <div>
@@ -59,44 +96,72 @@ const Contact = () => {
           {/* Right */}
           <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4">
             <div className="p-4">
-              <form className="grid md:grid-cols-2 gap-4 w-full py-2" action="">
-                <div className="flex flex-col">
-                  <label className="uppercase text-sm py-2">Name</label>
-                  <input
-                    className="border-2 rounded-lg p-3 flex border-gray-300"
-                    type="text"
-                  />
+              <form
+                id="contact-form"
+                ref={form}
+                onSubmit={sendEmail}
+                className="py-4"
+              >
+                <div className="w-full grid grid-cols-2">
+                  <div className="flex flex-col pr-2">
+                    <label className="uppercase text-left text-md py-2 text-gray-700">Name</label>
+                    <input
+                      className="flex shrink border-2 rounded-lg p-3 border-gray-300 min-w-0"
+                      placeholder="Your Name"
+                      name="fullName"
+                      type="text"
+                    />
+                  </div>
+                  <div className="flex flex-col pl-2">
+                    <label className="uppercase text-left text-md py-2 text-gray-700">Phone Number</label>
+                    <input
+                      className="flex shrink border-2 rounded-lg p-3 border-gray-300 min-w-0"
+                      placeholder="e.g. 999-999-9999"
+                      name="phone"
+                      type="text"
+                    />
+                  </div>
                 </div>
-                <div className="flex flex-col">
-                  <label className="uppercase text-sm py-2">Phone Number</label>
-                  <input
-                    className="border-2 rounded-lg p-3 flex border-gray-300"
-                    type="text"
-                  />
-                </div>
-              </form>
-              <div className="flex flex-col py-2 w-full">
-                <label className="uppercase text-sm py-2">Email</label>
+                <div className="flex flex-col py-2 w-full">
+                <label className="uppercase text-left text-md py-2 text-gray-700">Email</label>
                 <input
                   className="border-2 rounded-lg p-3 flex border-gray-300"
+                  placeholder="myemail@email.com"
+                  name="email"
                   type="email"
                 />
+                <div className="flex flex-col py-2 w-full">
+                  <label className="uppercase text-left text-md py-2 text-gray-700">Subject</label>
+                  <input
+                    className="border-2 rounded-lg p-3 flex border-gray-300"
+                    placeholder="Subject"
+                    name="subject"
+                    type="text"
+                  />
+                </div>
+                <div className="flex flex-col py-2 w-full">
+                  <label className="uppercase text-left text-md py-2 text-gray-700">Message</label>
+                  <textarea
+                    className="border-2 rounded-lg p-3 border-gray-300"
+                    name="message"
+                    placeholder="Message"
+                    id=""
+                    rows={6}
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  className="w-full my-4 p-4 shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] text-white text-center"
+                >
+                  Send Button
+                </button>
               </div>
-              <div className="flex flex-col py-2 w-full">
-                <label className="uppercase text-sm py-2">Message</label>
-                <textarea
-                  className="border-2 rounded-lg p-3 border-gray-300"
-                  name=""
-                  id=""
-                  rows={10}
-                ></textarea>
-              </div>
-              <button className="w-full p-4 text-gray-100 mt-4">
-                Send Message
-              </button>
+              </form>
+             
             </div>
           </div>
         </div>
+        </motion.div>
       </div>
       <div className="flex justify-center py-12">
         <Link href="/">
@@ -106,6 +171,7 @@ const Contact = () => {
         </Link>
       </div>
     </div>
+    
   );
 };
 

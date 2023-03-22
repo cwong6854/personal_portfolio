@@ -6,7 +6,7 @@ import About from "./about";
 import Project from "./projects";
 import Skills from "./skills";
 import Contact from "./contact";
-
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -17,12 +17,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <NavBar />
       <Main />
-      <About/>
-      <Skills/>
-      <Project/>
-      <Contact/>
+      <About />
+      <Skills />
+      <Project />
+      <Contact />
     </>
   );
 }

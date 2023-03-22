@@ -6,7 +6,6 @@ import {motion} from "framer-motion"
 
 
 const Main = () => {
-
   const linkedin_icon = <FaLinkedinIn />;
   const github_icon = <FaGithub />;
   const mail_icon = <AiOutlineMail />;
@@ -14,7 +13,6 @@ const Main = () => {
   return (
     <div className="w-full h-screen text-center">
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
-        
         <div>
         <motion.div
         initial={{ opacity: 0, x: -100}}
@@ -27,7 +25,7 @@ const Main = () => {
           <h1 className="py-4 text-gray-700">
             Hi, I'm <span className="text-[#4855e5]">Curtis</span>
           </h1>
-          <h1 className="py-4 text-gray-700">A Software Developer</h1>
+          <h1 className="py-4 text-gray-700">A Software Engineer</h1>
           <p className="py-4 text-gray-600 max-w-[70%] m-auto text-left">
             I'm a recent UC Berkeley graduate specializing in building (and
             occasionally designing) exceptional digital experiences. Currently,

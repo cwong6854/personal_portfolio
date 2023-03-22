@@ -11,21 +11,31 @@ const About = () => {
   }, []);
   console.log(width);
   return (
-    <div id="about" className="w-full p-2 flex items-center">
+    <div id="about" className="w-full px-4">
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center py-20 text-center">
-        <p className="uppercase text-sm tracking-widest text-gray-500">Get to know more</p>
-        <h1 className="pb-16 pt-4 text-gray-700">About Me</h1>
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.25, delay: 0.2 }}
+        viewport={{ once: true }}
         >
-          <div className="w-full mx-auto flex flex-row justify-center gap-8 max-md:flex-wrap">
+        <p className="w-full uppercase text-sm tracking-widest text-gray-500">Get to know more</p>
+        <h1 className="pb-16 pt-4 text-gray-700">About Me</h1>
+        </motion.div>
+        <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.25, delay: 0.2 }}
+        viewport={{ once: true }}
+        >
+          <div className="flex flex-row justify-center gap-8 max-md:flex-wrap">
+            <div className="w-[75%] min-w-fit flex justify-center ">
             <Image
-              className="max-h-[335px] block max-md:rounded-full border-solid border-black border-2"
+              className="w-64 h-64 max-md:rounded-full border-solid border-black border-2"
               src={cw_photo}
               alt="/"
-              width={300}
             />
+            </div>
             <div className="flex flex-col justify-between text-left">
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -53,10 +63,10 @@ const About = () => {
                   <p className="py-2">Availability: Open to work</p>
                 </div>
               </div>
-              <button className="py-3 w-[200px]">Download CSV</button>
+              <button className="py-3 w-[200px]">Download CV</button>
             </div>
           </div>
-        </motion.div>
+          </motion.div>
       </div>
     </div>
   );
