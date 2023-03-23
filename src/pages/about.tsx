@@ -80,8 +80,8 @@ const About = () => {
                   <p className="py-2">Availability: Open to work</p>
                 </div>
               </div>
-              <button className="py-3 w-[200px]"><a>Download CV</a></button>
-              <a href="/../../public/cw_resume.pdf" download><p>Click on me</p></a>
+              {/* <button className="py-3 w-[200px]"><a>Download CV</a></button> */}
+              {/* <a href="/../../public/cw_resume.pdf" download><p>Click on me</p></a> */}
             </div>
           </div>
           </motion.div>
