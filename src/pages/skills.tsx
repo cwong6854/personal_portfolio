@@ -7,7 +7,7 @@ import html_logo from "../../public/skills/html.png";
 import css_logo from "../../public/skills/css.png";
 import ts_logo from "../../public/skills/typescript.png";
 import js_logo from "../../public/skills/javascript.png";
-import css from "styled-jsx/css";
+import nextjs_logo from "../../public/skills/nextjs.png";
 import { motion } from "framer-motion";
 
 const Skills = () => {
@@ -26,7 +26,7 @@ const Skills = () => {
           <h1 className="pb-16 pt-4 text-gray-700">Skills</h1>
         </motion.div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <motion.div
+        <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.25, delay: 0.2 }}
@@ -35,24 +35,9 @@ const Skills = () => {
             <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
               <div className="grid grid-cols-2 gap-4 justify-center items-center">
                 <div className="m-auto">
-                  <Image src={react_logo} alt="/" width="64" />
+                  <Image src={python_logo} alt="/" width="64"/>
                 </div>
-                <div>React</div>
-              </div>
-            </div>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.25, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-              <div className="grid grid-cols-2 gap-4 justify-center items-center">
-                <div className="m-auto">
-                  <Image src={ts_logo} alt="/" width="64" />
-                </div>
-                <div>TypeScript</div>
+                <div>Python</div>
               </div>
             </div>
           </motion.div>
@@ -68,6 +53,22 @@ const Skills = () => {
                   <Image src={js_logo} alt="/" width="64" />
                 </div>
                 <div>JavaScript</div>
+              </div>
+            </div>
+          </motion.div>
+      
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.25, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
+              <div className="grid grid-cols-2 gap-4 justify-center items-center">
+                <div className="m-auto">
+                  <Image src={ts_logo} alt="/" width="64" />
+                </div>
+                <div>TypeScript</div>
               </div>
             </div>
           </motion.div>
@@ -103,9 +104,9 @@ const Skills = () => {
             <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
               <div className="grid grid-cols-2 gap-4 justify-center items-center">
                 <div className="m-auto">
-                  <Image src={python_logo} alt="/" width="64" height="64" />
+                  <Image src={nextjs_logo} alt="/" width="64" />
                 </div>
-                <div>Python</div>
+                <div>NextJs</div>
               </div>
             </div>
           </motion.div>
@@ -118,9 +119,9 @@ const Skills = () => {
             <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
               <div className="grid grid-cols-2 gap-4 justify-center items-center">
                 <div className="m-auto">
-                  <Image src={aws_logo} alt="/" width="64" height="64" />
+                  <Image src={react_logo} alt="/" width="64" />
                 </div>
-                <div>AWS</div>
+                <div>React</div>
               </div>
             </div>
           </motion.div>
@@ -133,7 +134,7 @@ const Skills = () => {
             <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
               <div className="grid grid-cols-2 gap-4 justify-center items-center">
                 <div className="m-auto">
-                  <Image src={tailwind_logo} alt="/" width="64" height="64" />
+                  <Image src={tailwind_logo} alt="/" width="64" />
                 </div>
                 <div>Tailwind</div>
               </div>

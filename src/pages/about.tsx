@@ -76,7 +76,7 @@ const About = () => {
                   <p className="py-2">Name: Curtis Wong</p>
                 </div>
                 <div className="py-2">
-                  <p className="py-2">Email: cwong990@berkeley.edu</p>
+                 <p className="py-2">Email: <a className="text-blue-500" href="mailto:cwong990@berkeley.edu">cwong990@berkeley.edu</a></p>
                   <p className="py-2">Availability: Open to work</p>
                 </div>
               </div>
