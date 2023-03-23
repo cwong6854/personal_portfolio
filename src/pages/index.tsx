@@ -6,7 +6,7 @@ import About from "./about";
 import Project from "./projects";
 import Skills from "./skills";
 import Contact from "./contact";
-import cw_resume from "../../public/cw_resume.pdf";
+// import cw_resume from "../../public/cw_resume.pdf";
 
 
 
@@ -20,7 +20,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Main />
-      {cw_resume}
       <About />
       <Skills />
       <Project />
