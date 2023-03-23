@@ -2,14 +2,31 @@ import React from "react";
 import cw_photo from "../../public/photo_headshot.png";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import cw_resume from "../../public/cw_resume.pdf"
 import { motion } from "framer-motion";
+// import {PDFDownloadLink} from "@react-pdf/renderer";
+import Link from "next/link";
+
 
 const About = () => {
+
   const [width, setWidth] = useState(0);
   useEffect(() => {
     setWidth(window.innerWidth);
   }, []);
   console.log(width);
+
+  function downloadPDF() {
+    const fileUrl = "../../public/cw_resume.pdf";
+    const fileName = 'curtis_wong_resume.pdf';
+    const a = document.createElement('a');
+    document.body.appendChild(a);
+    a.href = fileUrl;
+    a.download = fileName;
+    a.click();
+    document.body.removeChild(a);
+  }
+
   return (
     <div id="about" className="w-full px-4">
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center py-20 text-center">
@@ -28,7 +45,7 @@ const About = () => {
         transition={{ duration: 0.25, delay: 0.2 }}
         viewport={{ once: true }}
         >
-          <div className="flex flex-row justify-center gap-8 max-md:flex-wrap">
+          <div className="flex flex-row justify-center gap-8 mx-auto max-md:flex-wrap">
             <div className="w-[75%] min-w-fit flex justify-center ">
             <Image
               className="w-64 h-64 max-md:rounded-full border-solid border-black border-2"
@@ -63,7 +80,8 @@ const About = () => {
                   <p className="py-2">Availability: Open to work</p>
                 </div>
               </div>
-              <button className="py-3 w-[200px]">Download CV</button>
+              <button className="py-3 w-[200px]"><a>Download CV</a></button>
+              <a href="/../../public/cw_resume.pdf" download><p>Click on me</p></a>
             </div>
           </div>
           </motion.div>
