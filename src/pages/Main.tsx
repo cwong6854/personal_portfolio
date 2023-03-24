@@ -26,7 +26,7 @@ const Main = () => {
               Hi, I'm <span className="text-[#4855e5]">Curtis</span>
             </h1>
             <h1 className="py-4 text-gray-700">A Software Engineer</h1>
-            <p className="py-4 text-gray-600 max-w-[70%] m-auto text-center">
+            <p className="py-4 text-gray-600 max-w-[70%] m-auto text-center  tracking-widest text-sm">
               I'm a recent UC Berkeley graduate specializing in building (and
               occasionally designing) exceptional digital experiences.
               Currently, I'm focused on building responsive front-end web

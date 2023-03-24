@@ -25,7 +25,7 @@ const Project = () => {
           transition={{ duration: 0.25, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <div className="max-w-[600px] md:grid grid-cols-1 pt-4">
+          <div className="max-w-[800px] md:grid grid-cols-1 pt-4">
             <ProjectItem title="Rimble" imagebg={rimble_web} url="/rimble" />
           </div>
         </motion.div>

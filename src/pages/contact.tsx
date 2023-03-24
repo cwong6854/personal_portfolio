@@ -61,7 +61,7 @@ const Contact = () => {
               viewport={{ once: true }}
             >
               <div className="lg:p-4 h-full">
-                <div className="">
+                <div className="flex justify-center">
                   <Image
                     className="rounded-xl hover:scale-105 ease-in duration-300"
                     src={linkedin_headshot}
@@ -70,8 +70,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h2 className="py-2">Curtis Wong</h2>
-                  <p className="py-2">Software Developer</p>
-                  <p className="py-4">
+                  <p className="py-2 tracking-widest">Software Developer</p>
+                  <p className="py-4  tracking-widest text-sm">
                     I am available for freelance or full-time positions. Contact
                     me and lets's talk.
                   </p>

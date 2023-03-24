@@ -53,19 +53,13 @@ const About = () => {
               alt="/"
             />
             </div>
-            <div className="flex flex-col justify-between text-left">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Molestiae placeat consequuntur beatae, molestias perspiciatis
-                maiores nemo quisquam nisi numquam. Corporis id cum blanditiis
-                voluptates ut quibusdam repudiandae repellendus dolorum
-                eligendi?
+            <div className="flex flex-col justify-between text-left tracking-widest text-sm">
+              <p className="">
+              I am a proud first-generation college student from San Francisco, CA, and a recent graduate in Data Science from UC Berkeley. With a passion for technology and a focus on web development, I am currently pursuing roles in software development and data science within the tech industry. 
               </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corrupti cumque a dicta, asperiores repudiandae veniam itaque
-                odio eveniet amet numquam provident nihil sapiente voluptates in
-                voluptatibus odit dolorum perferendis excepturi!
+              <br/>
+              <p className="">
+              My goal is to utilize my knowledge and skillsets in software and engineering tools to contribute to the improvement of modern-day technology, and to innovate products that have a positive impact on the world. As a lifelong learner, I am excited to join a team that values creativity, innovation, and continuous growth.
               </p>
               <div className="">
                 <hr className="border-t-2 border-black/40 border-solid my-4" />

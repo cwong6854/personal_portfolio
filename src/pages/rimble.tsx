@@ -34,7 +34,7 @@ const rimble = () => {
           <Link href={"https://rimble.io/"} target="_blank">
           <button className="px-8 py-2 mt-4 mr-8">Demo</button>
           </Link>
-          <Link href={"https://github.com/rimbleorg"}>
+          <Link href={"https://github.com/rimbleorg"} target="_blank">
           <button className="px-8 py-2 mt-4">Code</button>
           </Link>
         </div>
@@ -43,19 +43,19 @@ const rimble = () => {
             <p className="text-center font-bold pb-2">Technologies</p>
             <div className="grid grid-cols-3 md:grid-cols-1">
               <p className="text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> React
+                <RiRadioButtonFill className="pr-1 min-w-[16px]" /> React
               </p>
               <p className="text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> JavaScript
+                <RiRadioButtonFill className="pr-1 min-w-[16px]" /> JavaScript
               </p>
               <p className="text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> HTML
+                <RiRadioButtonFill className="pr-1 min-w-[16px]" /> HTML
               </p>
               <p className="text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> CSS
+                <RiRadioButtonFill className="pr-1 min-w-[16px]" /> CSS
               </p>
               <p className="text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> AWS (Amazon Web Services)
+                <RiRadioButtonFill className="pr-1 min-w-[16px]" /> AWS
               </p>
             </div>
           </div>
