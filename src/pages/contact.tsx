@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useState, useRef } from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
@@ -14,6 +14,12 @@ const Contact = () => {
   const github_icon = <FaGithub />;
   const mail_icon = <AiOutlineMail />;
   const person_icon = <BsFillPersonLinesFill />;
+
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [subject, setSubject] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   // EmailJS
 
@@ -31,6 +37,8 @@ const Contact = () => {
           console.log(err.text);
         }
       );
+    console.log(e.target);
+
     if (document.getElementById("contact-form") === null) {
       return;
     } else {
@@ -135,6 +143,7 @@ const Contact = () => {
                         placeholder="Your Name"
                         name="fullName"
                         type="text"
+                        onChange={(e) => setName(e.target.value)}
                       />
                     </div>
                     <div className="flex flex-col pl-2">
@@ -146,6 +155,7 @@ const Contact = () => {
                         placeholder="e.g. 999-999-9999"
                         name="phone"
                         type="text"
+                        onChange={(e) => setPhone(e.target.value)}
                       />
                     </div>
                   </div>
@@ -158,6 +168,7 @@ const Contact = () => {
                       placeholder="myemail@email.com"
                       name="email"
                       type="email"
+                      onChange={(e) => setEmail(e.target.value)}
                     />
                     <div className="flex flex-col py-2 w-full">
                       <label className="uppercase text-left text-sm py-2 text-gray-700 tracking-widest">
@@ -168,6 +179,7 @@ const Contact = () => {
                         placeholder="Subject"
                         name="subject"
                         type="text"
+                        onChange={(e) => setSubject(e.target.value)}
                       />
                     </div>
                     <div className="flex flex-col py-2 w-full">
@@ -180,11 +192,20 @@ const Contact = () => {
                         placeholder="Message"
                         id=""
                         rows={6}
+                        onChange={(e) => setMessage(e.target.value)}
                       ></textarea>
                     </div>
                     <button
                       type="submit"
-                      className="w-full my-4 p-4 shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] text-white text-center"
+                      className={name && email && message && subject && phone ?
+                        "w-full my-4 p-4 shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] text-white text-center cursor-pointer" :
+                        "w-full my-4 p-4 shadow-xl shadow-gray-400 rounded-xl uppercase bg-gray-400 text-black text-center"
+                      }
+                      disabled={
+                        name && email && message && subject && phone
+                          ? false
+                          : true
+                      }
                     >
                       Send Message
                     </button>
