@@ -150,7 +150,7 @@ const Contact = () => {
                     </div>
                   </div>
                   <div className="flex flex-col py-2 w-full">
-                    <label className="uppercase text-left text-md py-2 text-gray-700">
+                    <label className="uppercase text-left text-sm py-2 text-gray-700 tracking-widest">
                       Email
                     </label>
                     <input
@@ -160,7 +160,7 @@ const Contact = () => {
                       type="email"
                     />
                     <div className="flex flex-col py-2 w-full">
-                      <label className="uppercase text-left text-md py-2 text-gray-700">
+                      <label className="uppercase text-left text-sm py-2 text-gray-700 tracking-widest">
                         Subject
                       </label>
                       <input
@@ -171,7 +171,7 @@ const Contact = () => {
                       />
                     </div>
                     <div className="flex flex-col py-2 w-full">
-                      <label className="uppercase text-left text-md py-2 text-gray-700">
+                      <label className="uppercase text-left text-sm py-2 text-gray-700 tracking-widest">
                         Message
                       </label>
                       <textarea

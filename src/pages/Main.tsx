@@ -60,6 +60,9 @@ const Main = () => {
           </div>
         </div>
       </div>
+      {/* <Link href="/resume">
+              Resume
+            </Link> */}
     </div>
   );
 };

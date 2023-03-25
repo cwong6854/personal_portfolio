@@ -7,6 +7,7 @@ import { BsFillPersonLinesFill } from "react-icons/bs";
 import { useRouter } from "next/router";
 import cw_logo from "../../public/cw_logo.png"
 import {motion,useScroll} from "framer-motion"
+import resume from "@/pages/resume";
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
@@ -21,7 +22,7 @@ const NavBar = () => {
   useEffect(() => {
     if ( 
       router.asPath === '/rimble' ||
-      router.asPath === '/property' ||
+      router.asPath === '/resume' ||
       router.asPath === '/property' ||
       router.asPath === '/property' ||
       router.asPath === '/property'
@@ -150,23 +151,31 @@ const NavBar = () => {
                 <li onClick={() => setNav(false)}className="py-4 text-sm">Contact</li>
               </Link>
             </ul>
-            <div className="pt-40">
+            <div className="pt-10">
               <p className="uppercase tracking-widest text-[#5651e5]">
                 Let's Connect
               </p>
               <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
+                <Link href={"https://github.com/cwong6854"} target="_blank">
                 <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                   {github_icon}
                 </div>
+                </Link>
+                <Link href={"https://www.linkedin.com/in/curtiswong990/"} target="_blank">
                 <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                   {linkedin_icon}
                 </div>
+                </Link>
+                <Link href={"mailto:cwong990@berkeley.edu"} target="_blank">
                 <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                   {mail_icon}
                 </div>
+                </Link>
+                <Link href={"/#contact"} target="_blank" onClick={() => setNav(false)}>
                 <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                   {person_icon}
                 </div>
+                </Link>
               </div>
             </div>
           </div>

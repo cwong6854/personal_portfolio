@@ -23,19 +23,17 @@ const rimble = () => {
       </div>
       <div className="max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 pt-8">
         <div className="col-span-4">
-          <p>Project</p>
           <h2>Overview</h2>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam
-            perspiciatis consectetur excepturi sint magni itaque sunt rem
-            repellendus pariatur! Numquam beatae iste cum sequi excepturi
-            dolores fugit officiis, labore itaque?
+          <p className="py-2 tracking-widest text-md">
+            Rimble is a data analytics and machine learning company that creates
+            and sells odds for competitive esports matches to bookmakers and
+            betting companies on a monthly basis.
           </p>
           <Link href={"https://rimble.io/"} target="_blank">
-          <button className="px-8 py-2 mt-4 mr-8">Demo</button>
+            <button className="px-8 py-2 mt-4 mr-8">Demo</button>
           </Link>
           <Link href={"https://github.com/rimbleorg"} target="_blank">
-          <button className="px-8 py-2 mt-4">Code</button>
+            <button className="px-8 py-2 mt-4">Code</button>
           </Link>
         </div>
         <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4">
