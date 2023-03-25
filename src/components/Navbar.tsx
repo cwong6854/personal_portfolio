@@ -6,8 +6,8 @@ import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { useRouter } from "next/router";
 import cw_logo from "../../public/cw_logo.png"
-import {motion,useScroll} from "framer-motion"
-import resume from "@/pages/resume";
+// import {motion,useScroll} from "framer-motion"
+// import resume from "@/pages/resume";
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
@@ -16,7 +16,7 @@ const NavBar = () => {
   const [linkColor, setLinkColor] = useState('#1f2937');
   const [menuColor, setMenuColor] = useState("#ecf0f3");
 
-  const {scrollYProgress} = useScroll()
+  // const {scrollYProgress} = useScroll()
   const router = useRouter();
 
   useEffect(() => {
@@ -114,12 +114,14 @@ const NavBar = () => {
         >
           <div>
             <div className="flex w-full items-center justify-between">
+              <Link href="/" onClick={() => setNav(false)}>
               <Image
                 src={cw_logo}
                 alt="/"
                 width="87"
                 height="35"
               />
+              </Link>
               <div
                 onClick={handleNav}
                 className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer"
@@ -127,13 +129,13 @@ const NavBar = () => {
                 {close_icon}
               </div>
             </div>
-            <div className="border-b border-gray-300 my-4">
-              <p className="">
+            <div className="border-b border-gray-300 my-4 pb-2">
+              <p className="tracking-widest text-sm">
                 Let's connect and build things together!
               </p>
             </div>
           </div>
-          <div className="py-4 flex flex-col">
+          <div className="py-2 flex flex-col">
             <ul className="uppercase">
               <Link href="/">
                 <li onClick={() => setNav(false)}className="py-4 text-sm">Home</li>

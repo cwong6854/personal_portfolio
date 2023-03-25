@@ -70,7 +70,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h2 className="py-2">Curtis Wong</h2>
-                  <p className="py-2 tracking-widest">Software Developer</p>
+                  <p className="py-2 tracking-widest">Software Engineer</p>
                   <p className="py-4  tracking-widest text-sm">
                     I am available for freelance or full-time positions. Contact
                     me and lets's talk.
@@ -186,7 +186,7 @@ const Contact = () => {
                       type="submit"
                       className="w-full my-4 p-4 shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] text-white text-center"
                     >
-                      Send Button
+                      Send Message
                     </button>
                   </div>
                 </form>
