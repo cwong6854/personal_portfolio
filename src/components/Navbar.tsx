@@ -6,8 +6,6 @@ import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { useRouter } from "next/router";
 import cw_logo from "../../public/cw_logo.png"
-// import {motion,useScroll} from "framer-motion"
-// import resume from "@/pages/resume";
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
@@ -16,14 +14,13 @@ const NavBar = () => {
   const [linkColor, setLinkColor] = useState('#1f2937');
   const [menuColor, setMenuColor] = useState("#ecf0f3");
 
-  // const {scrollYProgress} = useScroll()
   const router = useRouter();
 
   useEffect(() => {
     if ( 
       router.asPath === '/rimble' ||
-      router.asPath === '/resume' ||
-      router.asPath === '/property' ||
+      router.asPath === '/pley' ||
+      router.asPath === '/320_judah' ||
       router.asPath === '/property' ||
       router.asPath === '/property'
     ) {

@@ -51,7 +51,7 @@ const pley = () => {
                 <RiRadioButtonFill className="pr-1 min-w-[16px]" /> Node.js
               </p>
               <p className="text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1 min-w-[16px]" /> MongoDb
+                <RiRadioButtonFill className="pr-1 min-w-[16px]" /> MongoDB
               </p>
               <p className="text-gray-600 py-2 flex items-center">
                 <RiRadioButtonFill className="pr-1 min-w-[16px]" /> HTML

@@ -2,9 +2,7 @@ import React from "react";
 import cw_photo from "../../public/photo_headshot.png";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import cw_resume from "../../public/cw_resume.pdf"
 import { motion } from "framer-motion";
-// import {PDFDownloadLink} from "@react-pdf/renderer";
 import Link from "next/link";
 
 
@@ -15,17 +13,6 @@ const About = () => {
     setWidth(window.innerWidth);
   }, []);
   console.log(width);
-
-  function downloadPDF() {
-    const fileUrl = "../../public/cw_resume.pdf";
-    const fileName = 'curtis_wong_resume.pdf';
-    const a = document.createElement('a');
-    document.body.appendChild(a);
-    a.href = fileUrl;
-    a.download = fileName;
-    a.click();
-    document.body.removeChild(a);
-  }
 
   return (
     <div id="about" className="w-full px-4">
@@ -48,7 +35,7 @@ const About = () => {
           <div className="flex flex-row justify-center gap-8 mx-auto max-md:flex-wrap">
             <div className="w-[75%] min-w-fit flex justify-center ">
             <Image
-              className="w-64 h-64 max-md:rounded-full border-solid border-black border-2"
+              className="w-[300px] h-[300px] max-md:rounded-full border-solid border-black border-2"
               src={cw_photo}
               alt="/"
             />
