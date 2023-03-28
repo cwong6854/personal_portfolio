@@ -84,6 +84,13 @@ const NavBar = () => {
             </Link>
             <Link
               className="ml-10 text-sm uppercase hover:border-b border-black/80"
+              href="cw_resume.pdf"
+              target="_blank"
+            >
+              Resume
+            </Link>
+            <Link
+              className="ml-10 text-sm uppercase hover:border-b border-black/80"
               href="/#projects"
             >
               Projects
@@ -146,6 +153,9 @@ const NavBar = () => {
               <Link href="/#skills">
                 <li onClick={() => setNav(false)}className="py-4 text-sm">Skills</li>
               </Link>
+              <Link href="cw_resume.pdf" target="_blank">
+                <li onClick={() => setNav(false)}className="py-4 text-sm">Resume</li>
+              </Link>
               <Link href="/#projects">
                 <li onClick={() => setNav(false)}className="py-4 text-sm">Projects</li>
               </Link>
@@ -173,7 +183,7 @@ const NavBar = () => {
                   {mail_icon}
                 </div>
                 </Link>
-                <Link href={"/#contact"} target="_blank" onClick={() => setNav(false)}>
+                <Link href={"/#contact"} onClick={() => setNav(false)}>
                 <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                   {person_icon}
                 </div>
