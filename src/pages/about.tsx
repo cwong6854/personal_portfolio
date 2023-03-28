@@ -75,6 +75,7 @@ const About = () => {
                 </div>
               </div>
               <button className="py-3 w-[200px] tracking-widest"><a href="https://github.com/cwong6854/personal_portfolio/blob/main/public/cw_resume.pdf" target="_blank">Resume</a></button>
+              {/* <button className="py-3 my-4 w-[200px]"><a href={cw_resume}>Hello</a></button> */}
             </div>
           </div>
           </motion.div>
