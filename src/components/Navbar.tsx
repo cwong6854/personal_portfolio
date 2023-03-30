@@ -63,7 +63,7 @@ const NavBar = () => {
         <Link href="/"><Image src={cw_logo} alt="/" height={100}/></Link>
         
         <div>
-          <ul style={{color: `${linkColor}`}} className="hidden md:flex">
+          <ul style={{color: `${linkColor}`}} className="hidden md:flex px-2">
             <Link className="ml-10 text-sm uppercase hover:border-b border-black" href="/">
               Home
             </Link>
