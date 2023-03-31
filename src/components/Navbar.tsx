@@ -5,34 +5,34 @@ import { AiOutlineMail, AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { useRouter } from "next/router";
-import cw_logo from "../../public/cw_logo.png"
+import cw_logo from "../../public/cw_logo.png";
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
   const [navBG, setNavBG] = useState("#ecf0f3");
-  const [linkColor, setLinkColor] = useState('#1f2937');
+  const [linkColor, setLinkColor] = useState("#1f2937");
   const [menuColor, setMenuColor] = useState("#ecf0f3");
 
   const router = useRouter();
 
   useEffect(() => {
-    if ( 
-      router.asPath === '/rimble' ||
-      router.asPath === '/pley' ||
-      router.asPath === '/320_judah' ||
-      router.asPath === '/property' ||
-      router.asPath === '/property'
+    if (
+      router.asPath === "/rimble" ||
+      router.asPath === "/pley" ||
+      router.asPath === "/320_judah" ||
+      router.asPath === "/property" ||
+      router.asPath === "/property"
     ) {
-      setNavBG('transparent')
-      setLinkColor('#ecf0f3')
-      setMenuColor("#ecf0f4")
+      setNavBG("transparent");
+      setLinkColor("#ecf0f3");
+      setMenuColor("#ecf0f4");
     } else {
-      setNavBG('#ecf0f3')
-      setLinkColor('#1f2937')
-      setMenuColor("black")
+      setNavBG("#ecf0f3");
+      setLinkColor("#1f2937");
+      setMenuColor("black");
     }
-  }, [router])
+  }, [router]);
 
   const handleNav = () => {
     setNav(!nav);
@@ -41,16 +41,17 @@ const NavBar = () => {
   useEffect(() => {
     const handleShadow = () => {
       if (window.scrollY >= 90) {
-        setShadow(true) 
+        setShadow(true);
       } else {
-        setShadow(false)
+        setShadow(false);
       }
-    }
-    window.addEventListener('scroll', handleShadow)
-  },[])
+    };
+    window.addEventListener("scroll", handleShadow);
+  }, []);
 
-
-  const menu_icon = <AiOutlineMenu size={25} style={{color: `${menuColor}`}}/>;
+  const menu_icon = (
+    <AiOutlineMenu size={25} style={{ color: `${menuColor}` }} />
+  );
   const close_icon = <AiOutlineClose />;
   const linkedin_icon = <FaLinkedinIn />;
   const github_icon = <FaGithub />;
@@ -58,13 +59,25 @@ const NavBar = () => {
   const person_icon = <BsFillPersonLinesFill />;
 
   return (
-    <div style={{backgroundColor: `${navBG}`}} className={shadow ? "fixed w-full h-20 shadow-xl z-[100]" : "fixed w-full h-20 z-[100]"}>
+    <div
+      style={{ backgroundColor: `${navBG}` }}
+      className={
+        shadow
+          ? "fixed w-full h-20 shadow-xl z-[100]"
+          : "fixed w-full h-20 z-[100]"
+      }
+    >
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
-        <Link href="/"><Image src={cw_logo} alt="/" height={100}/></Link>
-        
+        <Link href="/">
+          <Image src={cw_logo} alt="/" height={100} />
+        </Link>
+
         <div>
-          <ul style={{color: `${linkColor}`}} className="hidden md:flex px-2">
-            <Link className="ml-10 text-sm uppercase hover:border-b border-black" href="/">
+          <ul style={{ color: `${linkColor}` }} className="hidden md:flex px-2">
+            <Link
+              className="ml-10 text-sm uppercase hover:border-b border-black"
+              href="/"
+            >
               Home
             </Link>
             <Link
@@ -119,12 +132,7 @@ const NavBar = () => {
           <div>
             <div className="flex w-full items-center justify-between">
               <Link href="/" onClick={() => setNav(false)}>
-              <Image
-                src={cw_logo}
-                alt="/"
-                width="87"
-                height="35"
-              />
+                <Image src={cw_logo} alt="/" width="87" height="35" />
               </Link>
               <div
                 onClick={handleNav}
@@ -142,22 +150,34 @@ const NavBar = () => {
           <div className="py-2 flex flex-col">
             <ul className="uppercase">
               <Link href="/">
-                <li onClick={() => setNav(false)}className="py-4 text-sm">Home</li>
+                <li onClick={() => setNav(false)} className="py-4 text-sm">
+                  Home
+                </li>
               </Link>
               <Link href="/#about">
-                <li onClick={() => setNav(false)}className="py-4 text-sm">About</li>
+                <li onClick={() => setNav(false)} className="py-4 text-sm">
+                  About
+                </li>
               </Link>
               <Link href="/#skills">
-                <li onClick={() => setNav(false)}className="py-4 text-sm">Skills</li>
+                <li onClick={() => setNav(false)} className="py-4 text-sm">
+                  Skills
+                </li>
               </Link>
               <Link href="cw_resume.pdf" target="_blank">
-                <li onClick={() => setNav(false)}className="py-4 text-sm">Resume</li>
+                <li onClick={() => setNav(false)} className="py-4 text-sm">
+                  Resume
+                </li>
               </Link>
               <Link href="/#projects">
-                <li onClick={() => setNav(false)}className="py-4 text-sm">Projects</li>
+                <li onClick={() => setNav(false)} className="py-4 text-sm">
+                  Projects
+                </li>
               </Link>
               <Link href="/#contact">
-                <li onClick={() => setNav(false)}className="py-4 text-sm">Contact</li>
+                <li onClick={() => setNav(false)} className="py-4 text-sm">
+                  Contact
+                </li>
               </Link>
             </ul>
             <div className="pt-10">
@@ -166,24 +186,27 @@ const NavBar = () => {
               </p>
               <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
                 <Link href={"https://github.com/cwong6854"} target="_blank">
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  {github_icon}
-                </div>
+                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                    {github_icon}
+                  </div>
                 </Link>
-                <Link href={"https://www.linkedin.com/in/curtiswong990/"} target="_blank">
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  {linkedin_icon}
-                </div>
+                <Link
+                  href={"https://www.linkedin.com/in/curtiswong990/"}
+                  target="_blank"
+                >
+                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                    {linkedin_icon}
+                  </div>
                 </Link>
                 <Link href={"mailto:cwong990@berkeley.edu"} target="_blank">
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  {mail_icon}
-                </div>
+                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                    {mail_icon}
+                  </div>
                 </Link>
                 <Link href={"/#contact"} onClick={() => setNav(false)}>
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  {person_icon}
-                </div>
+                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                    {person_icon}
+                  </div>
                 </Link>
               </div>
             </div>
