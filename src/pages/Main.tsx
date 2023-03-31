@@ -1,5 +1,5 @@
 import React from "react";
-import { AiOutlineMail } from "react-icons/ai";
+import { AiOutlineMail, AiOutlineArrowDown } from "react-icons/ai";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { motion } from "framer-motion";
@@ -10,6 +10,7 @@ const Main = () => {
   const github_icon = <FaGithub />;
   const mail_icon = <AiOutlineMail />;
   const person_icon = <BsFillPersonLinesFill />;
+  const arrow_down = <AiOutlineArrowDown className="my-4 hover:scale-150 cursor-pointer duration-500" size={35} />;
   return (
     <div className="w-full h-screen text-center">
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
@@ -58,11 +59,13 @@ const Main = () => {
               </div>
             </Link>
           </div>
+          <div className="py-8 flex flex-col items-center">
+            <Link href="/#about"><p>Learn More</p></Link>
+            <Link href="/#about">{arrow_down}</Link>
+            
+          </div>
         </div>
       </div>
-      {/* <Link href="/resume">
-              Resume
-            </Link> */}
     </div>
   );
 };
