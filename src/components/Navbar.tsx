@@ -20,17 +20,15 @@ const NavBar = () => {
     if (
       router.asPath === "/rimble" ||
       router.asPath === "/pley" ||
-      router.asPath === "/320_judah" ||
-      router.asPath === "/property" ||
-      router.asPath === "/property"
+      router.asPath === "/320_judah"
     ) {
       setNavBG("transparent");
       setLinkColor("#ecf0f3");
       setMenuColor("#ecf0f4");
     } else {
       setNavBG("#ecf0f3");
-      setLinkColor("#1f2937");
-      setMenuColor("black");
+      setLinkColor("#000000");
+      setMenuColor("#000000");
     }
   }, [router]);
 
@@ -73,40 +71,51 @@ const NavBar = () => {
         </Link>
 
         <div>
-          <ul style={{ color: `${linkColor}` }} className="hidden md:flex px-2">
+          <ul
+            style={{
+              color: `${linkColor}`,
+            }}
+            className="hidden md:flex px-2"
+          >
             <Link
-              className="ml-10 text-sm uppercase hover:border-b border-black"
+              className="ml-10 text-sm uppercase hover:border-b "
+              style={{ borderColor: `${linkColor}` }}
               href="/"
             >
               Home
             </Link>
             <Link
-              className="ml-10 text-sm uppercase hover:border-b border-black/80"
+              className="ml-10 text-sm uppercase hover:border-b"
+              style={{ borderColor: `${linkColor}` }}
               href="/#about"
             >
               About
             </Link>
             <Link
-              className="ml-10 text-sm uppercase hover:border-b border-black/80"
+              className="ml-10 text-sm uppercase hover:border-b"
+              style={{ borderColor: `${linkColor}` }}
               href="/#skills"
             >
               Skills
             </Link>
             <Link
-              className="ml-10 text-sm uppercase hover:border-b border-black/80"
+              className="ml-10 text-sm uppercase hover:border-b"
+              style={{ borderColor: `${linkColor}` }}
               href="cw_resume.pdf"
               target="_blank"
             >
               Resume
             </Link>
             <Link
-              className="ml-10 text-sm uppercase hover:border-b border-black/80"
+              className="ml-10 text-sm uppercase hover:border-b"
+              style={{ borderColor: `${linkColor}` }}
               href="/#projects"
             >
               Projects
             </Link>
             <Link
-              className="ml-10 text-sm uppercase hover:border-b border-black/80"
+              className="ml-10 text-sm uppercase hover:border-b"
+              style={{ borderColor: `${linkColor}` }}
               href="/#contact"
             >
               Contact
