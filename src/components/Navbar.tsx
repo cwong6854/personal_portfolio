@@ -11,7 +11,7 @@ const NavBar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
   const [navBG, setNavBG] = useState("#ecf0f3");
-  const [linkColor, setLinkColor] = useState("#1f2937");
+  const [linkColor, setLinkColor] = useState("#ecf0f3");
   const [menuColor, setMenuColor] = useState("#ecf0f3");
 
   const router = useRouter();
@@ -27,7 +27,7 @@ const NavBar = () => {
       setMenuColor("#ecf0f4");
     } else {
       setNavBG("#ecf0f3");
-      setLinkColor("#000000");
+      setLinkColor("black");
       setMenuColor("#000000");
     }
   }, [router]);
@@ -74,48 +74,43 @@ const NavBar = () => {
           <ul
             style={{
               color: `${linkColor}`,
+              borderColor: `${linkColor}`,
             }}
             className="hidden md:flex px-2"
           >
             <Link
-              className={`ml-10 text-sm uppercase after:transition-all after:ease-in-out after:duration-300 after:bg-[${linkColor}] after:bg-repeat after:bg-scroll after:block after:h-[2px] after:w-0 hover:after:w-full`}
-              style={{ borderColor: `${linkColor}` }}
+              className={`ml-10 text-sm uppercase after:transition-all after:ease-in-out after:duration-300 h-[2px] after:bg-repeat after:bg-current after:border-current after:bg-scroll after:block after:h-[2px] after:w-0 hover:after:w-full`}
               href="/"
             >
               Home
             </Link>
             <Link
-              className={`ml-10 text-sm uppercase after:transition-all after:ease-in-out after:duration-300 after:bg-[${linkColor}] after:bg-repeat after:bg-scroll after:block after:h-[2px] after:w-0 hover:after:w-full`}
-              style={{ borderColor: `${linkColor}` }}
+              className={`ml-10 text-sm uppercase after:transition-all after:ease-in-out after:duration-300 h-[2px] after:bg-repeat after:bg-current after:border-current after:bg-scroll after:block after:h-[2px] after:w-0 hover:after:w-full`}
               href="/#about"
             >
               About
             </Link>
             <Link
-              className={`ml-10 text-sm uppercase after:transition-all after:ease-in-out after:duration-300 after:bg-[${linkColor}] after:bg-repeat after:bg-scroll after:block after:h-[2px] after:w-0 hover:after:w-full`}
-              style={{ borderColor: `${linkColor}` }}
+              className={`ml-10 text-sm uppercase after:transition-all after:ease-in-out after:duration-300 h-[2px] after:bg-repeat after:bg-current after:border-current after:bg-scroll after:block after:h-[2px] after:w-0 hover:after:w-full`}
               href="/#skills"
             >
               Skills
             </Link>
             <Link
-              className={`ml-10 text-sm uppercase after:transition-all after:ease-in-out after:duration-300 after:bg-[${linkColor}] after:bg-repeat after:bg-scroll after:block after:h-[2px] after:w-0 hover:after:w-full`}
-              style={{ borderColor: `${linkColor}` }}
+              className={`ml-10 text-sm uppercase after:transition-all after:ease-in-out after:duration-300 h-[2px] after:bg-repeat after:bg-current after:border-current after:bg-scroll after:block after:h-[2px] after:w-0 hover:after:w-full`}
               href="cw_resume.pdf"
               target="_blank"
             >
               Resume
             </Link>
             <Link
-              className={`ml-10 text-sm uppercase after:transition-all after:ease-in-out after:duration-300 after:bg-[${linkColor}] after:bg-repeat after:bg-scroll after:block after:h-[2px] after:w-0 hover:after:w-full`}
-              style={{ borderColor: `${linkColor}` }}
+              className={`ml-10 text-sm uppercase after:transition-all after:ease-in-out after:duration-300 h-[2px] after:bg-repeat after:bg-current after:border-current after:bg-scroll after:block after:h-[2px] after:w-0 hover:after:w-full`}
               href="/#projects"
             >
               Projects
             </Link>
             <Link
-              className={`ml-10 text-sm uppercase after:transition-all after:ease-in-out after:duration-300 after:bg-[${linkColor}] after:bg-repeat after:bg-scroll after:block after:h-[2px] after:w-0 hover:after:w-full`}
-              style={{ borderColor: `${linkColor}` }}
+              className={`ml-10 text-sm uppercase after:transition-all after:ease-in-out after:duration-300 h-[2px] after:bg-repeat after:bg-current after:border-current after:bg-scroll after:block after:h-[2px] after:w-0 hover:after:w-full`}
               href="/#contact"
             >
               Contact
