@@ -26,7 +26,7 @@ const Skills = () => {
           <h1 className="pb-16 pt-4 text-gray-700">Skills</h1>
         </motion.div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <motion.div
+          <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.25, delay: 0.2 }}
@@ -35,7 +35,7 @@ const Skills = () => {
             <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
               <div className="grid grid-cols-2 gap-4 justify-center items-center">
                 <div className="m-auto">
-                  <Image src={python_logo} alt="/" width="64"/>
+                  <Image src={python_logo} alt="/" width="64" />
                 </div>
                 <div>Python</div>
               </div>
@@ -56,7 +56,7 @@ const Skills = () => {
               </div>
             </div>
           </motion.div>
-      
+
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -87,14 +87,21 @@ const Skills = () => {
               </div>
             </div>
           </motion.div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image src={css_logo} alt="/" width="64" />
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.25, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
+              <div className="grid grid-cols-2 gap-4 justify-center items-center">
+                <div className="m-auto">
+                  <Image src={css_logo} alt="/" width="64" />
+                </div>
+                <div>CSS</div>
               </div>
-              <div>CSS</div>
             </div>
-          </div>
+          </motion.div>
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
