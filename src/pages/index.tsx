@@ -6,9 +6,7 @@ import About from "./about";
 import Project from "./projects";
 import Skills from "./skills";
 import Contact from "./contact";
-// import cw_resume from "../../public/cw_resume.pdf";
-
-
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -24,6 +22,7 @@ export default function Home() {
       <Skills />
       <Project />
       <Contact />
+      <Footer />
     </>
   );
 }
