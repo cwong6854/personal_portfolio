@@ -4,7 +4,7 @@ import judah_web from "../../public/judah_website.png";
 import ProjectItem from "@/components/ProjectItem";
 import { motion } from "framer-motion";
 
-const Project = () => {
+const Project: React.FC = () => {
   return (
     <div id="projects" className="w-full p-2 flex items-center py-16">
       <div className="max-w-[1240px] mx-auto px-2 py-6 text-center flex flex-col justify-center items-center">

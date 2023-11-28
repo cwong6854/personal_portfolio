@@ -6,7 +6,7 @@ import Skills from "./skills";
 import Contact from "./contact";
 import Footer from "../components/Footer";
 
-export default function Home() {
+export default function Home(): React.ReactNode {
   return (
     <>
       <Head>

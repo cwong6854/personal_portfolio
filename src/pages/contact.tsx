@@ -9,24 +9,28 @@ import emailjs from "@emailjs/browser";
 import Image from "next/image";
 import Link from "next/link";
 
-const Contact = () => {
+const Contact: React.FC = () => {
   const linkedin_icon = <FaLinkedinIn />;
   const github_icon = <FaGithub />;
   const mail_icon = <AiOutlineMail />;
   const person_icon = <BsFillPersonLinesFill />;
 
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [subject, setSubject] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [name, setName] = useState<string>("");
+  const [phone, setPhone] = useState<string>("");
+  const [subject, setSubject] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
 
   const form = useRef(null);
-  const sendEmail = (e: any) => {
+  function sendEmail(e: React.FormEvent<HTMLFormElement>): void {
     e.preventDefault();
-
     emailjs
-      .sendForm("gmail", "template_l4juqb9", e.target, "8mGVXzo77MLLMclo2")
+      .sendForm(
+        "service_p1en4ne",
+        "template_oujwgbg",
+        e.currentTarget,
+        "Vi6ZebHPIOntddwSR"
+      )
       .then(
         (res) => {
           console.log(res.text);
@@ -40,9 +44,9 @@ const Contact = () => {
     if (document.getElementById("contact-form") === null) {
       return;
     } else {
-      e.target.reset();
+      e.currentTarget.reset();
     }
-  };
+  }
 
   return (
     <div id="contact" className="w-full p-2 flex flex-col items-center py-16">

@@ -4,7 +4,7 @@ import React from "react";
 import rimble_web from "../../public/rimble_website.png";
 import { RiRadioButtonFill } from "react-icons/ri";
 
-const rimble = () => {
+const rimble: React.FC = () => {
   return (
     <div className="w-full">
       <div className="w-screen h-[30vh] lg:h-[40vh] relative">

@@ -4,12 +4,11 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-const About = () => {
-  const [width, setWidth] = useState(0);
+const About: React.FC = () => {
+  const [width, setWidth] = useState<number>(0);
   useEffect(() => {
     setWidth(window.innerWidth);
   }, []);
-  console.log(width);
 
   return (
     <div id="about" className="w-full px-4">
