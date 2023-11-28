@@ -20,7 +20,7 @@ const NavBar = () => {
     if (
       router.asPath === "/rimble" ||
       router.asPath === "/pley" ||
-      router.asPath === "/320_judah"
+      router.asPath === "/doelger"
     ) {
       setNavBG("transparent");
       setLinkColor("#ecf0f3");
