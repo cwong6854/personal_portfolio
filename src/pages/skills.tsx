@@ -1,6 +1,5 @@
 import Image from "next/image";
 import react_logo from "../../public/skills/react.png";
-import aws_logo from "../../public/skills/aws.png";
 import tailwind_logo from "../../public/skills/tailwind.png";
 import python_logo from "../../public/skills/python.png";
 import html_logo from "../../public/skills/html.png";

@@ -3,7 +3,6 @@ import cw_photo from "../../public/photo_headshot.png";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
 
 const About = () => {
   const [width, setWidth] = useState(0);

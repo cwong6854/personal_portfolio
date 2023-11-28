@@ -1,6 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
-import NavBar from "@/components/Navbar";
 import Main from "@/pages/Main";
 import About from "./about";
 import Project from "./projects";

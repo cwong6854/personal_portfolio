@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react";
-import { useRouter } from "next/router";
 import { AiOutlineMail } from "react-icons/ai";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
@@ -21,10 +20,6 @@ const Contact = () => {
   const [subject, setSubject] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-
-  // EmailJS
-
-  const router = useRouter();
 
   const form = useRef(null);
   const sendEmail = (e: any) => {
@@ -120,8 +115,6 @@ const Contact = () => {
               </div>
             </motion.div>
           </div>
-          {/* Right */}
-
           <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4">
             <motion.div
               initial={{ opacity: 0 }}

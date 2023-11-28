@@ -3,8 +3,6 @@ import pley_web from "../../public/pley_page.png";
 import judah_web from "../../public/judah_website.png";
 import ProjectItem from "@/components/ProjectItem";
 import { motion } from "framer-motion";
-import Image from "next/image";
-import Link from "next/link";
 
 const Project = () => {
   return (
