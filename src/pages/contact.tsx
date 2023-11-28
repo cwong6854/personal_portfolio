@@ -200,9 +200,10 @@ const Contact = () => {
                     </div>
                     <button
                       type="submit"
-                      className={name && email && message && subject && phone ?
-                        "w-full my-4 p-4 shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] text-white text-center cursor-pointer" :
-                        "w-full my-4 p-4 shadow-xl shadow-gray-400 rounded-xl uppercase bg-gray-400 text-black text-center"
+                      className={
+                        name && email && message && subject && phone
+                          ? "w-full my-4 p-4 shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] text-white text-center cursor-pointer"
+                          : "w-full my-4 p-4 shadow-xl shadow-gray-400 rounded-xl uppercase bg-gray-400 text-black text-center"
                       }
                       disabled={
                         name && email && message && subject && phone
