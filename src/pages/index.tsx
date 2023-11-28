@@ -1,6 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
-import NavBar from "@/components/Navbar";
 import Main from "@/pages/Main";
 import About from "./about";
 import Project from "./projects";
@@ -8,7 +6,7 @@ import Skills from "./skills";
 import Contact from "./contact";
 import Footer from "../components/Footer";
 
-export default function Home() {
+export default function Home(): React.ReactNode {
   return (
     <>
       <Head>

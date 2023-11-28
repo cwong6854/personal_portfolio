@@ -4,7 +4,7 @@ import React from "react";
 import pley_web from "../../public/pley_page.png";
 import { RiRadioButtonFill } from "react-icons/ri";
 
-const pley = () => {
+const pley: React.FC = () => {
   return (
     <div className="w-full">
       <div className="w-screen h-[30vh] lg:h-[40vh] relative">
@@ -25,9 +25,17 @@ const pley = () => {
         <div className="col-span-4">
           <h2>Overview</h2>
           <p className="py-2 tracking-widest text-md">
-            Pley is a restaurant recommendation app that gives curated recommendations based on user’s taste profiles. Tailored towards Gen Z users, save your favorite search results into your personal profile for safe keep.
+            Pley is a restaurant recommendation app that gives curated
+            recommendations based on user’s taste profiles. Tailored towards Gen
+            Z users, save your favorite search results into your personal
+            profile for safe keep.
           </p>
-          <Link href={"https://www.youtube.com/watch?v=k72RueGnOwk&ab_channel=NalinDwivedi"} target="_blank">
+          <Link
+            href={
+              "https://www.youtube.com/watch?v=k72RueGnOwk&ab_channel=NalinDwivedi"
+            }
+            target="_blank"
+          >
             <button className="px-8 py-2 mt-4 mr-8">Demo</button>
           </Link>
           <Link href={"https://github.com/cwong6854/pley"} target="_blank">

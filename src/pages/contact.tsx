@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react";
-import { useRouter } from "next/router";
 import { AiOutlineMail } from "react-icons/ai";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
@@ -10,28 +9,28 @@ import emailjs from "@emailjs/browser";
 import Image from "next/image";
 import Link from "next/link";
 
-const Contact = () => {
+const Contact: React.FC = () => {
   const linkedin_icon = <FaLinkedinIn />;
   const github_icon = <FaGithub />;
   const mail_icon = <AiOutlineMail />;
   const person_icon = <BsFillPersonLinesFill />;
 
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [subject, setSubject] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-
-  // EmailJS
-
-  const router = useRouter();
+  const [name, setName] = useState<string>("");
+  const [phone, setPhone] = useState<string>("");
+  const [subject, setSubject] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
 
   const form = useRef(null);
-  const sendEmail = (e: any) => {
+  function sendEmail(e: React.FormEvent<HTMLFormElement>): void {
     e.preventDefault();
-
     emailjs
-      .sendForm("gmail", "template_l4juqb9", e.target, "8mGVXzo77MLLMclo2")
+      .sendForm(
+        "service_p1en4ne",
+        "template_oujwgbg",
+        e.currentTarget,
+        "Vi6ZebHPIOntddwSR"
+      )
       .then(
         (res) => {
           console.log(res.text);
@@ -45,9 +44,9 @@ const Contact = () => {
     if (document.getElementById("contact-form") === null) {
       return;
     } else {
-      e.target.reset();
+      e.currentTarget.reset();
     }
-  };
+  }
 
   return (
     <div id="contact" className="w-full p-2 flex flex-col items-center py-16">
@@ -120,8 +119,6 @@ const Contact = () => {
               </div>
             </motion.div>
           </div>
-          {/* Right */}
-
           <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4">
             <motion.div
               initial={{ opacity: 0 }}
@@ -200,9 +197,10 @@ const Contact = () => {
                     </div>
                     <button
                       type="submit"
-                      className={name && email && message && subject && phone ?
-                        "w-full my-4 p-4 shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] text-white text-center cursor-pointer" :
-                        "w-full my-4 p-4 shadow-xl shadow-gray-400 rounded-xl uppercase bg-gray-400 text-black text-center"
+                      className={
+                        name && email && message && subject && phone
+                          ? "w-full my-4 p-4 shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] text-white text-center cursor-pointer"
+                          : "w-full my-4 p-4 shadow-xl shadow-gray-400 rounded-xl uppercase bg-gray-400 text-black text-center"
                       }
                       disabled={
                         name && email && message && subject && phone

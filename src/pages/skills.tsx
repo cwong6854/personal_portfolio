@@ -1,6 +1,5 @@
 import Image from "next/image";
 import react_logo from "../../public/skills/react.png";
-import aws_logo from "../../public/skills/aws.png";
 import tailwind_logo from "../../public/skills/tailwind.png";
 import python_logo from "../../public/skills/python.png";
 import html_logo from "../../public/skills/html.png";
@@ -10,7 +9,7 @@ import js_logo from "../../public/skills/javascript.png";
 import nextjs_logo from "../../public/skills/nextjs.png";
 import { motion } from "framer-motion";
 
-const Skills = () => {
+const Skills: React.FC = () => {
   return (
     <div id="skills" className="w-full p-2">
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center py-20 text-center">

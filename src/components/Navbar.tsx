@@ -7,12 +7,12 @@ import { BsFillPersonLinesFill } from "react-icons/bs";
 import { useRouter } from "next/router";
 import cw_logo from "../../public/cw_logo.png";
 
-const NavBar = () => {
-  const [nav, setNav] = useState(false);
-  const [shadow, setShadow] = useState(false);
-  const [navBG, setNavBG] = useState("#ecf0f3");
-  const [linkColor, setLinkColor] = useState("#ecf0f3");
-  const [menuColor, setMenuColor] = useState("#ecf0f3");
+const NavBar: React.FC = () => {
+  const [nav, setNav] = useState<boolean>(false);
+  const [shadow, setShadow] = useState<boolean>(false);
+  const [navBG, setNavBG] = useState<string>("#ecf0f3");
+  const [linkColor, setLinkColor] = useState<string>("#ecf0f3");
+  const [menuColor, setMenuColor] = useState<string>("#ecf0f3");
 
   const router = useRouter();
 
@@ -20,7 +20,7 @@ const NavBar = () => {
     if (
       router.asPath === "/rimble" ||
       router.asPath === "/pley" ||
-      router.asPath === "/320_judah"
+      router.asPath === "/doelger"
     ) {
       setNavBG("transparent");
       setLinkColor("#ecf0f3");
@@ -32,29 +32,29 @@ const NavBar = () => {
     }
   }, [router]);
 
-  const handleNav = () => {
+  function handleNav(): void {
     setNav(!nav);
-  };
+  }
 
   useEffect(() => {
-    const handleShadow = () => {
+    function handleShadow(): void {
       if (window.scrollY >= 90) {
         setShadow(true);
       } else {
         setShadow(false);
       }
-    };
+    }
     window.addEventListener("scroll", handleShadow);
   }, []);
 
-  const menu_icon = (
+  const menu_icon: JSX.Element = (
     <AiOutlineMenu size={25} style={{ color: `${menuColor}` }} />
   );
-  const close_icon = <AiOutlineClose />;
-  const linkedin_icon = <FaLinkedinIn />;
-  const github_icon = <FaGithub />;
-  const mail_icon = <AiOutlineMail />;
-  const person_icon = <BsFillPersonLinesFill />;
+  const close_icon: JSX.Element = <AiOutlineClose />;
+  const linkedin_icon: JSX.Element = <FaLinkedinIn />;
+  const github_icon: JSX.Element = <FaGithub />;
+  const mail_icon: JSX.Element = <AiOutlineMail />;
+  const person_icon: JSX.Element = <BsFillPersonLinesFill />;
 
   return (
     <div
