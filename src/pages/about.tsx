@@ -67,9 +67,9 @@ const About: React.FC = () => {
                     Email:{" "}
                     <a
                       className="text-blue-500"
-                      href="mailto:cwong990@berkeley.edu"
+                      href="mailto:curtiswong9990@gmail.com"
                     >
-                      cwong990@berkeley.edu
+                      curtiswong9990@gmail.com
                     </a>
                   </p>
                   <p className="py-2">Availability: Open to work</p>

@@ -202,7 +202,7 @@ const NavBar: React.FC = () => {
                     {linkedin_icon}
                   </div>
                 </Link>
-                <Link href={"mailto:cwong990@berkeley.edu"} target="_blank">
+                <Link href={"mailto:curtiswong9990@gmail.com"} target="_blank">
                   <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                     {mail_icon}
                   </div>
