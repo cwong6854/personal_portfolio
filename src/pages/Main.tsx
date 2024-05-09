@@ -53,7 +53,7 @@ const Main: React.FC = () => {
                 {linkedin_icon}
               </div>
             </Link>
-            <Link href={"mailto:cwong990@berkeley.edu"}>
+            <Link href={"mailto:curtiswong9990@gmail.com"}>
               <div className="rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-105 ease-in duration-300">
                 {mail_icon}
               </div>
