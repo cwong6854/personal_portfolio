@@ -33,13 +33,17 @@ const Contact: React.FC = () => {
       )
       .then(
         (res) => {
-          console.log(res.text);
+          setName("");
+          setPhone("");
+          setSubject("");
+          setEmail("");
+          setMessage("");
+          window.location.reload();
         },
         (err) => {
           console.log(err.text);
         }
       );
-    console.log(e.target);
 
     if (document.getElementById("contact-form") === null) {
       return;
