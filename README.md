@@ -6,7 +6,7 @@ Welcome to my personal portfolio repository! This repository showcases my skills
 
 - [About Me](#about-me)
 - [Skills](#skills)
-- [Projects](#projects)
+- [Work](#work)
 - [Experience](#experience)
 - [Education](#education)
 - [Contact](#contact)
@@ -22,7 +22,15 @@ I'm a recent UC Berkeley graduate specializing in building (and occasionally des
   Vercel, Babel, Webpack, Bash, Jenkins, Google Cloud Platform (GCP), Amazon Web Services (AWS)
 - **Frameworks & Tools:** Next.js, Tailwind CSS, Bootstrap, Express.js, Jest
 
-## Projects
+## Work
+### [Nighthawk](https://www.nighthawk.ag/)
+
+- At Nighthawk, I created a full-stack agronomist solution application powered by several GPT models and RAG, tailored for robust agricultural context and recommendations. My efforts produced deeper insights on thousands of agricultural products and enhanced farm product recommendations personalized for the user.
+
+### [Verdant Robotics](https://www.verdantrobotics.com/)
+
+- At Verdant Robotics, I designed and developed core components and features for several web apps and internal tools, showcasing the critical metrics to farmers the performance of our robotic fleet. My efforts significantly enhanced data visualization, operational efficiency, and user engagement, ultimately leading to more informed decision-making across various agricultural projects.
+
 
 ### [Doelger](https://judah-320.vercel.app/)
 
