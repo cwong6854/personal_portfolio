@@ -17,13 +17,13 @@ const ProjectItem: React.FC<Source> = ({ title, imagebg, tech, url }) => {
         src={imagebg}
         alt="/"
       />
-      <div className="hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+      <div className="hidden group-hover:flex flex-col justify-center self-center absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
         <h3 className="text-2xl text-white tracking-wider text-center">
           {title}
         </h3>
         <p className="pb-4 pt-2 text-white text-center">{tech}</p>
-        <Link href={url}>
-          <p className="text-center py-3 rounded-lg bg-white text-gray-700 font-bold text-lg cursor-pointer">
+        <Link href={url} className="flex justify-center">
+          <p className="text-center py-3 rounded-lg bg-white text-gray-700 font-bold text-lg cursor-pointer px-2">
             Learn More
           </p>
         </Link>
