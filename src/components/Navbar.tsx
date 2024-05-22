@@ -107,7 +107,7 @@ const NavBar: React.FC = () => {
               className={`ml-10 text-sm uppercase after:transition-all after:ease-in-out after:duration-300 h-[2px] after:bg-repeat after:bg-current after:border-current after:bg-scroll after:block after:h-[2px] after:w-0 hover:after:w-full`}
               href="/#projects"
             >
-              Projects
+              Work
             </Link>
             <Link
               className={`ml-10 text-sm uppercase after:transition-all after:ease-in-out after:duration-300 h-[2px] after:bg-repeat after:bg-current after:border-current after:bg-scroll after:block after:h-[2px] after:w-0 hover:after:w-full`}
